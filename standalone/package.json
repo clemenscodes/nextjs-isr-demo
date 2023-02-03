@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "postbuild": "rm -rf standalone && cp -r .next/standalone standalone",
+    "build": "next build && rm -rf standalone && cp -r .next/standalone standalone",
     "start": "next start",
     "lint": "next lint"
   },
