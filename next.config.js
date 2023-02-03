@@ -1,3 +1,4 @@
+const { join } = require("path");
 module.exports = {
     async headers() {
         return [
@@ -15,5 +16,10 @@ module.exports = {
     experimental: {
         // Defaults to 50MB
         isrMemoryCacheSize: 0,
+    },
+    onDemandEntries: {
+        pagesBufferLength: 5,
+        maxInactiveAge: 1000 * 60 * 60,
+        pagesDirectory: join(__dirname, "pages-isr"),
     },
 };
