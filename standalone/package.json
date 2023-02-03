@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "cp -r .next/standalone standalone",
+    "postbuild": "rm -rf standalone && cp -r .next/standalone standalone",
     "start": "next start",
     "lint": "next lint"
   },
